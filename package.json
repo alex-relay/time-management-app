@@ -10,9 +10,6 @@
     "graphql": "^16.4.0",
     "turbolinks": "^5.2.0"
   },
-  "engines": {
-    "node": "14.x"
-  },
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^4.8.1"
