@@ -2,17 +2,9 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-
-const normalizeTimeZone = (day) => {
-  let date = new Date(day);
-  const offset = date.getTimezoneOffset();
-  date.setMinutes(date.getMinutes() + offset);
-  return date.setMinutes(date.getMinutes() - 240);
-};
 
 const convertToIsoString = (date) => {
   return new Date(date).toISOString();
@@ -28,7 +20,6 @@ const createTime = (date) => {
 
 const OutlinedCard = ({ entry, handleClick }) => {
   const { clockIn, clockOut, userName, id } = entry;
-  let newDate = normalizeTimeZone(clockIn);
   const clockInDate = createDate(clockIn);
   const clockInTime = createTime(clockIn);
   const clockOutTime = clockOut ? createTime(clockOut) : null;
@@ -36,7 +27,6 @@ const OutlinedCard = ({ entry, handleClick }) => {
 
   return (
     <Box
-      // display="inline-block"
       style={{
         display: "inline-block",
         flexDirection: "row",

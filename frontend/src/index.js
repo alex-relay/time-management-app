@@ -5,7 +5,6 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Entries from "./components/Entries";
 import NavBar from "./components/NavBar";
 import NewEntry from "./components/NewEntry";
 import EditEntry from "./components/EditEntry";
